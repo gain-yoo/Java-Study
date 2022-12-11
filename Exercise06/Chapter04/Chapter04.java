@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 
 public class Chapter04 {
     public static void main(String[] args) throws IOException {
-        FileWriter fw = new FileWriter("sample.txt", true);
+        FileWriter fw = new FileWriter("./Exercise06/Chapter04/sample.txt", true);
 
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
@@ -16,7 +16,7 @@ public class Chapter04 {
         fw.write(String.format("%s\n", input));
         fw.close();
 
-        BufferedReader br = new BufferedReader(new FileReader("sample.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Exercise06/Chapter04/sample.txt"));
         while(true){
             String line = br.readLine();
             if (line==null) break;

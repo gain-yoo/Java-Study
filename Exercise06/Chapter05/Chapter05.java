@@ -9,14 +9,14 @@ import java.util.ArrayList;
 
 public class Chapter05 {
     public static void main(String[] args) throws IOException {
-        PrintWriter pw = new PrintWriter(new FileWriter("sample4.txt", true));
+        PrintWriter pw = new PrintWriter(new FileWriter("./Exercise06/Chapter05/sample.txt", true));
         pw.println("Life is too short");
         pw.println("you need python");
         pw.close();
 
         ArrayList text = new ArrayList();
 
-        BufferedReader br = new BufferedReader(new FileReader("sample4.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Exercise06/Chapter05/sample.txt"));
         while(true){
             String line = br.readLine();
             if (line==null) break;
@@ -30,17 +30,8 @@ public class Chapter05 {
         // python 이라는 단어를 java로 변경한다.
         word = word.replaceAll("python", "java");
 
-        FileWriter fw = new FileWriter("sample4.txt");
+        FileWriter fw = new FileWriter("./Exercise06/Chapter05/sample.txt");
         fw.write(word);
         fw.close();
-
-        while(true){
-            String line = br.readLine();
-            if (line==null) break;
-            System.out.println(line); 
-        }
-        
-        br.close();  //생략해도 컴파일 오류없음
-
     }
 }
